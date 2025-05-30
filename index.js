@@ -25,17 +25,28 @@
 // document.getElementById("p2").textContent = `Student age is ${age}`;
 
 // <---------------Taking username as input----------->
+// document.addEventListener("DOMContentLoaded",function(){
+//     let username;
+//     document.getElementById("mySubmit").onclick = function(){
+//         username = document.getElementById("myText").value;
+//         console.log(username);
+//     }
+// });
 
-// let username;
-// document.getElementById("submit").onclick = function(){
-//     username =document.getElementById("username").value;
-//     document.getElementById("hello").textContent = `Hello ${username}`;
-//     console.log(username);
-// }
 
-// <---------Type conversion------->
+// <---------TYPE CONVERSION------>
+// age = Number(age);
 
-let age = window.prompt("How old are you?");
-age = Number(age);
-age += 1;
-console.log(age, typeof age);
+//Calculaing the circumference
+document.addEventListener("DOMContentLoaded",function(){
+    let circumference;
+    const PI = 3.14;
+    let radius;
+    document.getElementById("mySubmit").onclick = function(){
+        radius = document.getElementById("myText").value;
+        radius = Number(radius);
+        circumference = 2 * PI * radius;
+        document.getElementById("Pcircumference").textContent = `The Circumference is ${circumference} `;
+        console.log(circumference);
+    }
+}); 
